@@ -1,0 +1,9 @@
+<div class="content">
+    <form [formGroup]="ratesForm" *ngIf="!!rate">
+        <h2>{{rate.ccy}} to {{rate.base_ccy}}</h2>
+        <h3>{{rate.base_ccy}}:</h3>
+        <input [formControl] = "currencyUAN" (input)="convertCurrency()" [value]="currentlyUAN">
+        <h3>{{rate.ccy}}:</h3>
+        <input [formControl] = "currencyAnother" (input)="convertCurrency()" [value]="currentlyAnother">
+    </form>    
+</div>

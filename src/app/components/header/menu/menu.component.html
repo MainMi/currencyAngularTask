@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="content">
+            <h1>Exchange Rates</h1>
+            <p>Simple website for currency conversion</p>
+            <ul class="navigation">
+                <li *ngFor="let rate of rates">
+                    <a class="btn" [routerLink]="['..',rate.ccy]" >{{rate.ccy}}</a>
+                </li>
+            </ul>
+        </div>
+        
+    </section>
+</body>
+</html>
